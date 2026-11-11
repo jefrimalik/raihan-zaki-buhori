@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Ganti "Nama Mahasiswa" dengan nama kamu -->
+  <title>Nama Mahasiswa</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+      /* Elemen desain: warna background */
+      background: #123c47;
+      color: #f3ede0;
+    }
+    main {
+      max-width: 620px;
+      padding: 32px 24px;
+    }
+    h1 {
+      font-size: 2.4rem;
+      margin: 0 0 16px;
+      color: #f2b84b;
+    }
+    p { margin: 0 0 16px; }
+    button {
+      font: inherit;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: 0;
+      border-radius: 6px;
+      background: #f2b84b;
+      color: #123c47;
+      cursor: pointer;
+    }
+    button:hover { background: #ffd27a; }
+    button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+    #waktu { margin-top: 16px; font-weight: bold; color: #f2b84b; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Halo, Saya Nama Raihan Zaki Buhori</h1>
+
+    <p>Selamat datang kamerad semoga indonesia terhindar dari pemimpin korup.</p>
+
+    <p>Saya sudah cape hidup dengan pajak dimana mana dan kinerja pemerintah yang sampah.</p>
+
+    <p>Di bawah ini ada tombol kecil. Coba klik untuk melihat tanggal dan jam
+       saat ini ketika indonesia masih tertindas .</p>
+
+    <button id="tombol">Tampilkan tanggal &amp; jam</button>
+    <p id="waktu"></p>
+  </main>
+
+  <script>
+    document.getElementById("tombol").addEventListener("click", function () {
+      var sekarang = new Date().toLocaleString("id-ID", {
+        dateStyle: "full",
+        timeStyle: "medium"
+      });
+      document.getElementById("waktu").textContent = "Sekarang: " + sekarang;
+    });
+  </script>
+</body>
+</html>
